@@ -160,7 +160,8 @@ typedef struct {
     /* 0x1360 */ s32          sceneSetupIndex;
     /* 0x1364 */ s32          respawnFlag; // "restart_flag"
     /* 0x1368 */ RespawnData  respawn[3]; // "restart_data"
-    /* 0x13BC */ char         unk_13BC[0x0008];
+    /* 0x13BC */ char         unk_13BC[0x0007];
+    /* 0x13C3 */ u8           unk_13C3;
     /* 0x13C4 */ s16          dogParams;
     /* 0x13C6 */ char         unk_13C6[0x0001];
     /* 0x13C7 */ u8           unk_13C7;
@@ -586,6 +587,7 @@ typedef struct {
 
 typedef struct {
     /* 0x000 */ char   unk_00[0x134];
+    /* 0x128 */ s32    vr_box_staticSegment[3];
     /* 0x134 */ void*  dpList;
     /* 0x138 */ s32    unk_138;
     /* 0x13C */ void*  roomVtx;

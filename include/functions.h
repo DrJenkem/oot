@@ -1325,7 +1325,7 @@ void func_800AD5C0(UNK_PTR, Gfx**);
 // ? func_800AD920(?);
 // ? func_800AD950(?);
 // ? func_800AD958(?);
-// ? func_800ADBB0(?);
+s32 func_800ADBB0(void*, s32, s32, s32, s32, s32, s32, s32, u32, s32);
 // ? func_800AE2C0(?);
 // ? func_800AEFC8(?);
 // ? func_800AF178(?);
