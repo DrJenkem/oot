@@ -589,7 +589,7 @@ typedef struct {
     /* 0x134 */ void*  dpList;
     /* 0x138 */ s32    unk_138;
     /* 0x13C */ void*  roomVtx;
-    /* 0x140 */ u16    unk_140;
+    /* 0x140 */ s16    unk_140;
     /* 0x142 */ s16    unk_142;
     /* 0x144 */ float  unk_144;
     /* 0x148 */ float  unk_148;
