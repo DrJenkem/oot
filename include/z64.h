@@ -585,9 +585,15 @@ typedef struct {
 } SubGlobalContext1F74; // size = 0x4
 
 typedef struct {
-    /* 0x000 */ char unk_00[0x140];
-    /* 0x140 */ s16  unk_140;
-    /* 0x142 */ char unk_142[0x0E];
+    /* 0x000 */ char   unk_00[0x134];
+    /* 0x134 */ void*  dpList;
+    /* 0x138 */ s32    unk_138;
+    /* 0x13C */ void*  roomVtx;
+    /* 0x140 */ u16    unk_140;
+    /* 0x142 */ s16    unk_142;
+    /* 0x144 */ float  unk_144;
+    /* 0x148 */ float  unk_148;
+    /* 0x14C */ float  unk_14C;
 } SkyboxContext; // size = 0x150
 
 typedef struct {
