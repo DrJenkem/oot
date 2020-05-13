@@ -5,7 +5,54 @@
 
 #pragma GLOBAL_ASM("asm/non_matchings/code/z_vr_box/func_800AE2C0.s")
 
+#if 1
+typedef struct {
+    /* 0x00 */ s32  unk_00;
+    /* 0x04 */ s32  unk_04;
+    /* 0x08 */ s32  unk_08;
+    /* 0x0C */ s32  unk_0C;
+    /* 0x10 */ s32  unk_10;
+} Unk_8012AEBC; // size = 0x14
+
+extern Unk_8012AEBC D_8012AEBC[];
+
+void func_800AEFC8(SkyboxContext* vr_box, s16 skyboxId) {
+    Unk_8012AEBC *phi_s0;
+    u32 phi_s2 = 0;
+    s32 phi_s3 = 0;
+    s32 i;
+
+    if (skyboxId == 2 || (skyboxId >= 0x11 && skyboxId < 0x19)) {
+        for (i=0; i < 2; i++) {
+            phi_s0 = &D_8012AEBC[i];
+            phi_s3 = func_800ADBB0(vr_box, vr_box->roomVtx, phi_s3, phi_s0->unk_00, phi_s0->unk_04, phi_s0->unk_08, phi_s0->unk_0C, phi_s0->unk_10, i, phi_s2);
+            phi_s2 += 2;
+        }
+        return;
+    }
+
+    if (vr_box->unk_140 == 2) {
+        phi_s2 = 0;
+        phi_s3 = 0;
+        for (i=0; i < 3; i++) {
+            phi_s0 = &D_8012AEBC[i];
+            phi_s3 = func_800ADBB0(vr_box, vr_box->roomVtx, phi_s3, phi_s0->unk_00, phi_s0->unk_04, phi_s0->unk_08, phi_s0->unk_0C, phi_s0->unk_10, i, phi_s2);
+            phi_s2 += 2;
+        }
+        return;
+    }
+
+    for (i=0; i < 4; i++) {
+        u32 phi_s2 = 0;
+        s32 phi_s3 = 0;
+        phi_s0 = &D_8012AEBC[i];
+        phi_s3 = func_800ADBB0(vr_box, vr_box->roomVtx, phi_s3, phi_s0->unk_00, phi_s0->unk_04, phi_s0->unk_08, phi_s0->unk_0C, phi_s0->unk_10, i, phi_s2);
+        phi_s2 += 2;
+    }
+}
+#else
 #pragma GLOBAL_ASM("asm/non_matchings/code/z_vr_box/func_800AEFC8.s")
+#endif
 
 typedef struct {
     /* 0x00 */ u32  unk_00;
